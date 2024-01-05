@@ -1,0 +1,20 @@
+.categories {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  &__card {
+    height: 60rem;
+    width: 45rem;
+    text-align: center;
+    &--img {
+      height: 58rem;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 1rem;
+    }
+
+    &--description {
+      color: $color-secondary;
+    }
+  }
+}
