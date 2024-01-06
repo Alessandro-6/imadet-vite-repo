@@ -698,7 +698,7 @@ div.header {
   display: grid;
   grid-template-columns: repeat(10, 10rem);
   grid-template-rows: repeat(6, 10rem);
-  grid-auto-row: 30rem;
+  grid-auto-rows: 30rem;
   justify-content: center;
 }
 .section-newsletter > .heading-2 {
