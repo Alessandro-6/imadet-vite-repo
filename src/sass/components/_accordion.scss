@@ -1,0 +1,35 @@
+.accordions {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: center;
+  .accordion {
+    background-color: $color-light-gray;
+    width: 70rem;
+    padding: 1.6rem 3rem;
+    border-radius: 1rem;
+    box-shadow: 0 1.5rem 3rem rgba($color-secondary, 0.4);
+
+    &__question {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 900;
+      color: $color-secondary;
+    }
+
+    &__answer {
+      border-top: 1px solid $color-dark-gray;
+      margin-top: 1.7rem;
+      padding-top: 1rem;
+      font-weight: 700;
+      color: $color-secondary;
+    }
+
+    &__icon {
+      font-size: 2.5rem;
+    }
+  }
+}
