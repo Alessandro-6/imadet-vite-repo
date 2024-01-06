@@ -37,4 +37,13 @@
 
 .section-categories {
   padding-bottom: 4rem;
+  text-align: center;
+}
+
+.faq {
+  padding: 15rem;
+  min-height: 100vh;
+  & > h2 {
+    text-align: center;
+  }
 }

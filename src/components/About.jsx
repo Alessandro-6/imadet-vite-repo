@@ -1,35 +1,32 @@
 /* eslint-disable react/prop-types */
-import { BtnReadMore } from "./App";
-
+import ContentBox from "./ContentBox";
 export default function About() {
   return (
     <section className="section-about">
-      <ContentBox title={"visão"} num={1}>
+      <ContentBox title="visão" num={1}>
         Ser considerada a melhor empresa de aluguel de ferramentas e de
         equipamentos para construção civil em Angola.
       </ContentBox>
 
-      <ContentBox title={"Missão"} num={2}>
+      <ContentBox title="Missão" num={2}>
         Promover soluções para o aluguel de ferramentas e equipamentos
         relacionados para construção civil com eficiência e qualidade.
       </ContentBox>
-    </section>
-  );
-}
 
-function ContentBox({ title, num, children }) {
-  return (
-    <div className="about mb-lg">
-      <div className="about__content">
-        <h1 className="heading-1 mb-md">{title}</h1>
-        <p className="paragraph">{children}</p>
-        <BtnReadMore />
-      </div>
-      <img
-        className={`about__img about__img--${num}`}
-        src={`images/image-${num}.jpg`}
-        alt={`img ${num}`}
-      />
-    </div>
+      <ContentBox
+        title="sobre "
+        element={
+          <img
+            src="images/brand-dark.svg"
+            className="logo-imadet-sm"
+            alt="logo light"
+          />
+        }
+        num={7}
+      >
+        Somos a Imadet uma loja virtual especializada no divulgação de materiais
+        de construção civil facilitando o aluguer dos mesmos.
+      </ContentBox>
+    </section>
   );
 }

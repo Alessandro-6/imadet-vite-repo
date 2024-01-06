@@ -1,6 +1,7 @@
 function Categories() {
   return (
     <section className="section-categories">
+      <h2 className="heading-2 mb-lg">Categorias</h2>
       <div className="categories">
         <div className="categories__card">
           <img

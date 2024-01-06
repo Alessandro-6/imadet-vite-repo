@@ -42,7 +42,7 @@ function Nav() {
         </NavLink>
       </li>
       <li className="navbar__nav--item">
-        <NavLink to="/" className="navbar__nav--link">
+        <NavLink to="/faq" className="navbar__nav--link">
           faq
         </NavLink>
       </li>

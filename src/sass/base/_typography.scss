@@ -48,6 +48,10 @@ body {
 .logo-imadet {
   width: 40rem;
   margin: -7rem 0;
+  &-sm {
+    width: 30rem;
+    margin: -8.5rem 0;
+  }
 }
 
 .products-header {
