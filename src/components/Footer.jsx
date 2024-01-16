@@ -34,7 +34,7 @@ export default function Footer() {
           &copy; 2023-2030 Todos os direitos reservados
         </span>
         <a
-          href="true"
+          href=""
           className="contacts"
           onClick={(e) => {
             e.preventDefault();

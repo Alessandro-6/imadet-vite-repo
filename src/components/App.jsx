@@ -3,6 +3,7 @@ import HomePage from "../layout/HomePage";
 import Company from "../layout/Company";
 import Faq from "../layout/Faq";
 import { ProductsProvider } from "../context/ProductsProvider";
+import BecomeASupplier from "../layout/BecomeASupplier";
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
           <Route path="/home" element={<HomePage />} />
           <Route path="/company" element={<Company />} />
           <Route path="/faq" element={<Faq />} />
+          <Route path="/become-a-supplier" element={<BecomeASupplier />} />
         </Routes>
       </BrowserRouter>
     </ProductsProvider>

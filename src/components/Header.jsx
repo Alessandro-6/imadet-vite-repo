@@ -85,13 +85,8 @@ function Nav() {
         </NavLink>
       </li>
       <li className="navbar__nav--item">
-        <NavLink to="/" className="navbar__nav--link">
-          clientes
-        </NavLink>
-      </li>
-      <li className="navbar__nav--item">
-        <NavLink to="/" className="navbar__nav--link">
-          fornecedores
+        <NavLink to="/become-a-supplier" className="navbar__nav--link">
+          seja fornecedor
         </NavLink>
       </li>
       <li className="navbar__nav--item">
