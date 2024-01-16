@@ -5,7 +5,9 @@ const ProductsContext = createContext();
 function ProductsProvider({ children }) {
   const [openCartList, setOpenCartList] = useState(false);
   const [cartList, setCartList] = useState(
-    JSON.parse(localStorage.getItem("cart-list"))
+    !JSON.parse(localStorage.getItem("cart-list"))
+      ? []
+      : JSON.parse(localStorage.getItem("cart-list"))
   );
 
   const subtotal = cartList?.reduce(
