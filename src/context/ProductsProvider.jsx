@@ -8,10 +8,9 @@ function ProductsProvider({ children }) {
     JSON.parse(localStorage.getItem("cart-list"))
   );
 
-  const subtotal = cartList.reduce(
-    (acc, curCart) => acc + parseInt(curCart.price),
-    0
-  );
+  const subtotal = !cartList
+    ? 0
+    : cartList.reduce((acc, curCart) => acc + parseInt(curCart.price), 0);
   function handleAddCartItem(cartItem) {
     setCartList((cartList) => [...cartList, cartItem]);
   }
