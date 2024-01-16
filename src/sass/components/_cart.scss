@@ -1,0 +1,49 @@
+.cart {
+  position: relative;
+
+  .list {
+    position: absolute;
+    top: 6rem;
+    right: -6rem;
+    background-color: $color-light-gray;
+    border: 2px solid $color-dark-gray;
+    border-radius: 0.3rem;
+    padding: 2rem 4rem;
+    width: 40rem;
+  }
+  &__list {
+    list-style: none;
+    max-height: 30rem;
+    overflow-y: scroll;
+  }
+
+  &__item {
+    display: flex;
+    background-color: $color-white;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    align-items: center;
+    height: 7rem;
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__img {
+    width: 10rem;
+    margin-right: 1.5rem;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &__body {
+    font-size: 1.5rem;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid $color-dark-gray;
+    padding-top: 1rem;
+  }
+}

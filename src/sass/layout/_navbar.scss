@@ -1,6 +1,7 @@
 .navbar {
   display: flex;
   align-items: center;
+  justify-content: space-around;
   background: $color-secondary;
   height: 8rem;
   position: relative;
@@ -10,11 +11,10 @@
     flex-direction: column;
     height: auto;
   }
+
   &__logo {
     width: 8rem;
-    margin-right: auto;
     display: flex;
-
     @include respond(mob) {
       transform: translateX(-100%);
       margin-right: 0;
@@ -30,6 +30,7 @@
     }
   }
   &__nav {
+    margin-left: 10rem;
     display: flex;
     align-items: center;
     height: 100%;
@@ -58,7 +59,7 @@
       text-decoration: none;
       color: $color-white;
       text-transform: uppercase;
-      font-size: 1.6rem;
+      font-size: 1.5rem;
       transition: all 0.2s;
       &:hover {
         color: $color-primary;

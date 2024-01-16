@@ -21,4 +21,26 @@
   &:hover {
     color: $color-gray;
   }
+
+  &:active {
+    background-color: $color-secondary;
+  }
+}
+
+.close-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.7rem;
+  font-weight: 900;
+  width: 2rem;
+  height: 2rem;
+  background-color: $color-dark-gray;
+  transition: all 0.2s;
+  &:active {
+    background-color: $color-gray;
+    transform: translateY(0.3rem);
+  }
 }

@@ -1,63 +1,72 @@
 /* eslint-disable react/prop-types */
-import { FaRegHeart, FaShare } from "react-icons/fa";
+import { FaShare } from "react-icons/fa";
+import useCart from "../hooks/useCart";
 
 const tools = [
   {
     name: "Betoneira ",
     content: "Lorem ipsum dolor sit",
-    image: "images/card__image--1.jpg",
+    image: "images/betoneira.jpg",
     price: "4539kz",
     id: "image 1",
+    added: false,
   },
   {
     name: "Compactador de solo ",
     content: "Lorem ipsum dolor sit",
-    image: "images/card__image--2.jpg",
+    image: "images/compactador-de-solo.jpg",
     price: "6749kz",
     id: "image 2",
+    added: false,
   },
   {
     name: "Rebarbadora ",
     content: "Lorem ipsum dolor sit",
-    image: "images/card__image--3.jpg",
+    image: "images/rebarbadora.jpg",
     price: "8979kz",
     id: "image 3",
+    added: false,
   },
   {
     name: "Britadeira",
     content: "Lorem ipsum dolor sit",
-    image: "images/card__image--4.jpg",
+    image: "images/britadeira.jpg",
     price: "5499kz",
     id: "image 4",
+    added: false,
   },
   {
     name: "Motosserra",
     content: "Lorem ipsum dolor sit",
-    image: "images/card__image--5.jpg",
+    image: "images/motosserra.jpg",
     price: "5499kz",
     id: "image 5",
+    added: false,
   },
 
   {
     name: "Furadeira",
     content: "Lorem ipsum dolor sit",
-    image: "images/card__image--6.jpg",
+    image: "images/furadeira.jpg",
     price: "5499kz",
     id: "image 6",
+    added: false,
   },
   {
     name: "Motobomba",
     content: "Lorem ipsum dolor sit",
-    image: "images/card__image--7.jpg",
+    image: "images/motobomba.jpg",
     price: "5499kz",
     id: "image 7",
+    added: false,
   },
   {
     name: "Andaime",
     content: "Lorem ipsum dolor sit",
-    image: "images/card__image--8.jpg",
+    image: "images/andaime.jpg",
     price: "5499kz",
     id: "image 8",
+    added: false,
   },
 ];
 
@@ -76,7 +85,7 @@ export default function Products() {
 function Cards() {
   return (
     <div className="cards">
-      {tools.map((tool) => (
+      {tools.map((tool, i) => (
         <Card
           name={tool.name}
           content={tool.content}
@@ -84,6 +93,7 @@ function Cards() {
           id={tool.image}
           price={tool.price}
           key={tool.id}
+          index={i}
         />
       ))}
     </div>
@@ -91,18 +101,24 @@ function Cards() {
 }
 
 function Card({ name, content, id, image, price }) {
+  const { onAddCartItem, cartList } = useCart();
+
   return (
     <div className="card">
       <div className="card-top">
-        <button className="btn btn-cart mb-sm">Adicionar ao carrinho</button>
+        <button
+          className="btn btn-cart mb-sm"
+          onClick={() => {
+            if (cartList.some((cart) => cart.name === name)) return;
+            onAddCartItem({ name, price, image });
+          }}
+        >
+          Adicionar ao carrinho
+        </button>
         <div className="icon-group">
           <a href="true" className="icon-group__link">
             <FaShare className="icon-group__link--share" />
             <span>partilhar</span>
-          </a>
-          <a href="true" className="icon-group__link">
-            <FaRegHeart className="icon-group__link--like" />
-            <span>gosto</span>
           </a>
         </div>
       </div>

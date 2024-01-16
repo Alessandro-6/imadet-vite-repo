@@ -21,7 +21,7 @@
     transition: all 0.2s;
     font-family: inherit;
     &:focus {
-      outline: 1px solid $color-secondary;
+      outline: 1px solid $color-dark-gray;
     }
   }
 
@@ -32,8 +32,8 @@
   }
 
   .error {
-    border: 1px solid #f00;
-    outline: transparent;
+    border: 2px solid #f00;
+    outline: 1px solid transparent;
     background: rgb(250, 245, 245);
   }
 

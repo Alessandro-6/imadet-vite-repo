@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 import Modal from "./Modal";
 import { FaPhoneAlt } from "react-icons/fa";
@@ -21,55 +22,38 @@ export default function Newsletter() {
             setIsOpen(true);
           }}
         >
-          <div className="newsletter__input-group">
-            <label className="newsletter__label" htmlFor="name">
-              Nome
-            </label>
-            <input
-              id="name"
-              className={`newsletter__input ${
-                inputValue && !valid ? "error" : ""
-              }`}
-              type="text"
-              name="name"
-              autoComplete="given-name"
-              placeholder="exemplo"
-              onChange={(e) => setInputValue(e.target.value)}
-            />
-          </div>
+          <InputGroup
+            label="Nome"
+            onSetValue={setInputValue}
+            id="name"
+            type="text"
+            inputValue={inputValue}
+            valid={valid}
+            autoComplete="given-name"
+            placeholder="exemplo"
+          />
 
-          <div className="newsletter__input-group">
-            <label className="newsletter__label" htmlFor="email">
-              E-mail
-            </label>
-            <input
-              id="email"
-              className={`newsletter__input ${
-                inputValue && !valid ? "error" : ""
-              }`}
-              value={inputValue}
-              type="email"
-              name="e-mail"
-              autoComplete="email"
-              placeholder="exemplo123@gmail.com"
-              onChange={(e) => setInputValue(e.target.value)}
-            />
-          </div>
-          <div className="newsletter__input-group">
-            <label className="newsletter__label" htmlFor="subject">
-              Assunto
-            </label>
-            <input
-              id="subject"
-              className={`newsletter__input ${
-                inputValue && !valid ? "error" : ""
-              }`}
-              type="text"
-              name="subject"
-              autoComplete="off"
-              placeholder="opcional"
-            />
-          </div>
+          <InputGroup
+            label="E-mail"
+            onSetValue={setInputValue}
+            id="email"
+            type="email"
+            inputValue={inputValue}
+            valid={valid}
+            autoComplete="email"
+            placeholder="exemplo123@gmail.com"
+          />
+          <InputGroup
+            label="Assunto"
+            onSetValue={setInputValue}
+            id="subject"
+            type="text"
+            inputValue={inputValue}
+            valid={valid}
+            autoComplete="off"
+            placeholder="opcional"
+          />
+
           <div className="newsletter__input-group">
             <label className="newsletter__label" htmlFor="message">
               Mensagem
@@ -87,27 +71,27 @@ export default function Newsletter() {
           </button>
         </form>
         <aside className="side-content">
-          <div className="side-content__group side-content__group--1">
-            <FaLocationDot className="side-content__group--icon" />
-            <div className="side-content__group--content">
-              <h3 className="heading-3">Endereço</h3>
-              <p className="paragraph">lorem ipsum dolor sit amet</p>
-            </div>
-          </div>
-          <div className="side-content__group side-content__group--2">
-            <FaPhoneAlt className="side-content__group--icon" />
-            <div className="side-content__group--content">
-              <h3 className="heading-3">Telefone</h3>
-              <p className="paragraph">lorem ipsum dolor sit amet</p>
-            </div>
-          </div>
-          <div className="side-content__group side-content__group--3">
-            <MdWatchLater className="side-content__group--icon" />
-            <div className="side-content__group--content">
-              <h3 className="heading-3">Aberto</h3>
-              <p className="paragraph">lorem ipsum dolor sit amet</p>
-            </div>
-          </div>
+          <SideContent
+            title="Endereço"
+            element={<FaLocationDot className="side-content__group--icon" />}
+            number={1}
+          >
+            lorem ipsum dolor sit amet
+          </SideContent>
+          <SideContent
+            title="Telefone"
+            element={<FaPhoneAlt className="side-content__group--icon" />}
+            number={2}
+          >
+            lorem ipsum dolor sit amet
+          </SideContent>
+          <SideContent
+            title="Aberto"
+            element={<MdWatchLater className="side-content__group--icon" />}
+            number={3}
+          >
+            lorem ipsum dolor sit amet
+          </SideContent>
         </aside>
       </section>
       {isOpen && (
@@ -116,5 +100,45 @@ export default function Newsletter() {
         </Modal>
       )}
     </>
+  );
+}
+
+function InputGroup({
+  label,
+  onSetValue,
+  autoComplete,
+  inputValue,
+  valid,
+  type,
+  id,
+  placeholder,
+}) {
+  return (
+    <div className="newsletter__input-group">
+      <label className="newsletter__label" htmlFor={id}>
+        {label}
+      </label>
+      <input
+        id={id}
+        className={`newsletter__input ${inputValue && !valid ? "error" : ""}`}
+        type={type}
+        name={id}
+        autoComplete={autoComplete}
+        placeholder={placeholder}
+        onChange={(e) => onSetValue(e.target.value)}
+      />
+    </div>
+  );
+}
+
+function SideContent({ element, title, number, children }) {
+  return (
+    <div className={`side-content__group side-content__group--${number}`}>
+      {element}
+      <div className="side-content__group--content">
+        <h3 className="heading-3">{title}</h3>
+        <p className="paragraph">{children}</p>
+      </div>
+    </div>
   );
 }

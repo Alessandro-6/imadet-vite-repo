@@ -33,12 +33,19 @@ body {
   color: $color-secondary;
 }
 
+.heading-3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: $color-secondary;
+}
+
 .paragraph {
   font-size: 1.6rem;
 }
 
 .copyright {
   color: $color-secondary;
+  font-size: 1.6rem;
 
   @include respond(mob) {
     margin-bottom: 6rem;
@@ -66,4 +73,22 @@ body {
   font-size: 1.5rem;
   transition: all 0.2s;
   font-weight: 700;
+}
+
+.cart-btn {
+  border: none;
+  background: none;
+  font-size: 4rem;
+  color: $color-primary;
+  transition: all 0.2s;
+  cursor: pointer;
+  &:hover {
+    color: $color-light-gray;
+  }
+}
+
+.price {
+  font-weight: 700;
+  font-size: 1.7rem;
+  color: $color-primary;
 }
