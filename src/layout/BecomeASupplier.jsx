@@ -4,11 +4,11 @@ import Newsletter from "../components/Newsletter";
 
 function BecomeASupplier() {
   return (
-    <div>
+    <>
       <Header />
       <Newsletter />
       <Footer />
-    </div>
+    </>
   );
 }
 

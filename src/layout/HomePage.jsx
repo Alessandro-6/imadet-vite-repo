@@ -6,13 +6,13 @@ import Categories from "../components/Categories";
 
 function HomePage() {
   return (
-    <div>
+    <>
       <Header />
       <IntroLogo />
       <Categories />
       <Products />
       <Footer />
-    </div>
+    </>
   );
 }
 
