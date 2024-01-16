@@ -54,9 +54,9 @@ export default function Header() {
               <footer className="cart__footer mt-md">
                 <h3 className="heading-3">Subtotal</h3>
                 <h3 className="heading-3">
-                  {cartList.length === 0
+                  {cartList?.length === 0
                     ? "Nenhum item na lista"
-                    : `${cartList.length} items na lista`}
+                    : `${cartList?.length} items na lista`}
                 </h3>
                 <p className="price">{subtotal}kz</p>
               </footer>

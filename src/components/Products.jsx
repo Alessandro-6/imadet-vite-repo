@@ -109,7 +109,7 @@ function Card({ name, content, id, image, price }) {
         <button
           className="btn btn-cart mb-sm"
           onClick={() => {
-            if (cartList.some((cart) => cart.name === name)) return;
+            if (cartList?.some((cart) => cart.name === name)) return;
             onAddCartItem({ name, price, image });
           }}
         >

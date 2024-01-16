@@ -18,7 +18,7 @@ function ProductsProvider({ children }) {
 
   function handleRemoveCartItem(selectedCartItem) {
     setCartList(
-      cartList.filter((cartItem) => cartItem.name !== selectedCartItem)
+      cartList?.filter((cartItem) => cartItem.name !== selectedCartItem)
     );
   }
 

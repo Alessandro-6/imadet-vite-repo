@@ -7,10 +7,10 @@ function CartList() {
   const { cartList } = useCart();
   return (
     <ul className="cart__list">
-      {cartList.length === 0 ? (
+      {cartList?.length === 0 ? (
         <h3 className="heading-3">Comece a adicionar 🛒</h3>
       ) : (
-        cartList.map((cart, i) => (
+        cartList?.map((cart, i) => (
           <CartItem
             name={cart.name}
             price={cart.price}
