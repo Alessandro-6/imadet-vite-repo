@@ -13,7 +13,7 @@ export default function Newsletter() {
   return (
     <>
       <section className="section-newsletter" id="newsletter">
-        <h2 className="heading-2 mb-md">Entre em contacto</h2>
+        <h2 className="heading-2 mb-md">Torne-se fornecedor</h2>
         <form
           className="newsletter"
           onSubmit={(e) => {
@@ -83,14 +83,14 @@ export default function Newsletter() {
             element={<FaPhoneAlt className="side-content__group--icon" />}
             number={2}
           >
-            lorem ipsum dolor sit amet
+            +244 957 618 667
           </SideContent>
           <SideContent
             title="Aberto"
             element={<MdWatchLater className="side-content__group--icon" />}
             number={3}
           >
-            lorem ipsum dolor sit amet
+            Das 08:00 ás 18:00
           </SideContent>
         </aside>
       </section>
