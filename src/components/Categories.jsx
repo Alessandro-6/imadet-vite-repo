@@ -2,7 +2,7 @@
 function Categories() {
   return (
     <section className="section-categories">
-      <h2 className="heading-2 mb-lg">Categorias</h2>
+      <h2 className="heading-2 mb-lg">Alugar</h2>
       <div className="categories">
         <CategoriesCard title="Equipamentos" image="./images/image-8.jpg" />
         <CategoriesCard title="Máquinas" image="./images/image-9.jpg" />

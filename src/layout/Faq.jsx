@@ -41,17 +41,6 @@ function Faq() {
             Não, IMADET não aluga com dinheiro.
           </Accordion>
           <Accordion
-            question="Como desenvolveremos nosso serviço"
-            num={4}
-            active={active}
-            setActive={setActive}
-          >
-            Usaremos a tecnologia a nosso favor para desenvolver um website que
-            facilitará o contacto entre fornecedor e cliente, seremos
-            responsaveis pelo marketing atingindo assim o consumidor final e
-            pelo controle dos preços a serem praticados na página.
-          </Accordion>
-          <Accordion
             question="Quem pode se tornar fornecedor"
             num={5}
             active={active}

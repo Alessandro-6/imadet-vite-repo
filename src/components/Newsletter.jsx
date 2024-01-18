@@ -1,144 +1,41 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
-import Modal from "./Modal";
-import { FaPhoneAlt } from "react-icons/fa";
-import { FaLocationDot } from "react-icons/fa6";
-import { MdWatchLater } from "react-icons/md";
+
+import { useNavigate } from "react-router-dom";
 
 export default function Newsletter() {
-  const [isOpen, setIsOpen] = useState("");
-  const [inputValue, setInputValue] = useState("");
-  const valid = inputValue.includes("@gmail.com");
+  const navigate = useNavigate();
 
   return (
-    <>
-      <section className="section-newsletter" id="newsletter">
-        <h2 className="heading-2 mb-md">Torne-se fornecedor</h2>
-        <form
-          className="newsletter"
-          onSubmit={(e) => {
-            e.preventDefault();
-            if (!inputValue) return;
-            setIsOpen(true);
-          }}
-        >
-          <InputGroup
-            label="Nome"
-            onSetValue={setInputValue}
-            id="name"
-            type="text"
-            inputValue={inputValue}
-            valid={valid}
-            autoComplete="given-name"
-            placeholder="exemplo"
-          />
-
-          <InputGroup
-            label="E-mail"
-            onSetValue={setInputValue}
-            id="email"
-            type="email"
-            inputValue={inputValue}
-            valid={valid}
-            autoComplete="email"
-            placeholder="exemplo123@gmail.com"
-          />
-          <InputGroup
-            label="Assunto"
-            onSetValue={setInputValue}
-            id="subject"
-            type="text"
-            inputValue={inputValue}
-            valid={valid}
-            autoComplete="off"
-            placeholder="opcional"
-          />
-
-          <div className="newsletter__input-group">
-            <label className="newsletter__label" htmlFor="message">
-              Mensagem
-            </label>
-            <textarea
-              id="message"
-              autoComplete="off"
-              className="newsletter__input"
-              placeholder="eu gostaria de perguntar sobre"
-            ></textarea>
-          </div>
-
-          <button className="btn" type="submit">
-            Subscrever
-          </button>
-        </form>
-        <aside className="side-content">
-          <SideContent
-            title="Endereço"
-            element={<FaLocationDot className="side-content__group--icon" />}
-            number={1}
-          >
-            lorem ipsum dolor sit amet
-          </SideContent>
-          <SideContent
-            title="Telefone"
-            element={<FaPhoneAlt className="side-content__group--icon" />}
-            number={2}
-          >
-            +244 957 618 667
-          </SideContent>
-          <SideContent
-            title="Aberto"
-            element={<MdWatchLater className="side-content__group--icon" />}
-            number={3}
-          >
-            Das 08:00 ás 18:00
-          </SideContent>
-        </aside>
-      </section>
-      {isOpen && (
-        <Modal setIsOpen={setIsOpen}>
-          <h2>Você subscreveu-se com sucesso!</h2>
-        </Modal>
-      )}
-    </>
-  );
-}
-
-function InputGroup({
-  label,
-  onSetValue,
-  autoComplete,
-  inputValue,
-  valid,
-  type,
-  id,
-  placeholder,
-}) {
-  return (
-    <div className="newsletter__input-group">
-      <label className="newsletter__label" htmlFor={id}>
-        {label}
-      </label>
-      <input
-        id={id}
-        className={`newsletter__input ${inputValue && !valid ? "error" : ""}`}
-        type={type}
-        name={id}
-        autoComplete={autoComplete}
-        placeholder={placeholder}
-        onChange={(e) => onSetValue(e.target.value)}
-      />
-    </div>
-  );
-}
-
-function SideContent({ element, title, number, children }) {
-  return (
-    <div className={`side-content__group side-content__group--${number}`}>
-      {element}
-      <div className="side-content__group--content">
-        <h3 className="heading-3">{title}</h3>
-        <p className="paragraph">{children}</p>
+    <section className="section-newsletter" id="newsletter">
+      <h2 className="heading-2 mb-md products-header">Seja fornecedor</h2>
+      <div className="step">
+        Para se tornar fornecedor da IMADET, siga os passos abaixo:
       </div>
-    </div>
+      <div className="step">
+        {" "}
+        1-
+        <span className="inline-btn" onClick={() => navigate("/login")}>
+          {" "}
+          Subscreva
+        </span>{" "}
+        a página oficial da IMADET.
+      </div>
+      <div className="step">
+        {" "}
+        2-Preencha o formulário de parceria, indicando até dois equipamentos que
+        pretende subscrever. Informe a marca, modelo, potência e qualidade de
+        cada equipamento. (BAIXAR FORMULÁRIO){" "}
+      </div>
+      <div className="step">
+        3-Envie o formulário preenchido juntamente com vídeos demonstrativos dos
+        equipamentos em funcionamento para o nosso email (consultar em
+        contactos).
+      </div>
+      <div className="step">
+        {" "}
+        4-Aguarde o período de revisão do formulário. Esses passos garantirão
+        uma avaliação eficaz e ágil do seu pedido de parceria com a IMADET.
+      </div>
+    </section>
   );
 }

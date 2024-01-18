@@ -1,0 +1,20 @@
+.login-form {
+  display: grid;
+  grid-auto-rows: 8rem;
+  grid-template-columns: 50rem;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+
+  &__input-group {
+    @include input-group;
+  }
+
+  &__input {
+    @include input;
+  }
+
+  &__label {
+    @include label;
+  }
+}

@@ -94,6 +94,11 @@ function Nav() {
           faq
         </NavLink>
       </li>
+      <li className="navbar__nav--item">
+        <NavLink to="/login" className="navbar__nav--link">
+          Login
+        </NavLink>
+      </li>
     </ul>
   );
 }
@@ -105,7 +110,7 @@ function Dropdown() {
     <div className="dropdown">
       <div className="select" onClick={() => setIsOpen(!isOpen)}>
         <a href="/" className="navbar__nav--link selected">
-          Categorias <span className="caret"></span>
+          Alugar <span className="caret"></span>
         </a>
       </div>
       {isOpen && (

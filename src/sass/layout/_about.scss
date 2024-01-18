@@ -5,6 +5,10 @@
   border-radius: 1rem;
   overflow: hidden;
 
+  & .paragraph {
+    font-size: 2rem;
+  }
+
   @include respond(mob) {
     flex-direction: column;
   }

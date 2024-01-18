@@ -5,30 +5,15 @@
   grid-column: 6 / span 4;
 
   &__label {
-    font-weight: 700;
-    color: $color-secondary;
-    font-size: 1.7rem;
+    @include label;
   }
 
   &__input {
-    border-radius: 0.6rem;
-    border: 2px solid $color-dark-gray;
-    outline: 1px solid transparent;
-    padding: 1.4rem 1rem;
-    width: 100%;
-    margin-right: 1rem;
-    font-size: 1.8rem;
-    transition: all 0.2s;
-    font-family: inherit;
-    &:focus {
-      outline: 1px solid $color-dark-gray;
-    }
+    @include input;
   }
 
   &__input-group {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    @include input-group;
   }
 
   .error {

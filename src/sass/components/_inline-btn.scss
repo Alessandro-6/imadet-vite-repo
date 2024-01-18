@@ -1,0 +1,12 @@
+.inline-btn {
+  display: inline-block;
+  padding-bottom: 0.3rem;
+  border-bottom: 0.2rem solid $color-secondary;
+  transition: all 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    color: $color-primary;
+    border-bottom: 0.2rem solid $color-primary;
+  }
+}
