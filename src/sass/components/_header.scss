@@ -1,12 +1,22 @@
 div.header {
-  height: 65vh;
   background-image: linear-gradient(to right, rgba(#000, 0.4), rgba(#000, 0.4)),
     url(../../public/images/image-1.jpg);
   background-position: center;
   background-size: cover;
+  @include respond(mob) {
+    background-image: linear-gradient(
+        to right,
+        rgba(#000, 0.4),
+        rgba(#000, 0.4)
+      ),
+      url(../../public/images/image-1-mobile.jpg);
+  }
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  height: 65vh;
   margin-bottom: 10rem;
 }

@@ -116,14 +116,21 @@ function Card({ name, content, id, image, price }) {
           Adicionar ao carrinho
         </button>
         <div className="icon-group">
-          <a href="true" className="icon-group__link">
+          <a href="#section-products" className="icon-group__link">
             <FaShare className="icon-group__link--share" />
             <span>partilhar</span>
           </a>
         </div>
       </div>
       <div className="card-bottom">
-        <img src={image} alt={id} className="card-bottom__img" />
+        <picture>
+          <source
+            className="card-bottom__img"
+            media="(max-width:37.5em )"
+            srcSet={`${image.split(".").join("-mobile.")}`}
+          />
+          <img srcSet={image} alt={id} className="card-bottom__img" />
+        </picture>
         <div className="card-bottom__body">
           <h2 className="card-bottom__header">{name}</h2>
           <div className="card-bottom__content">

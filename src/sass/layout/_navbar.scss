@@ -8,8 +8,9 @@
   z-index: 1;
 
   @include respond(mob) {
-    flex-direction: column;
     height: auto;
+    width: 100vw;
+    flex-wrap: wrap;
   }
 
   &__logo {
@@ -17,8 +18,6 @@
     display: flex;
     @include respond(mob) {
       transform: translateX(-100%);
-      margin-right: 0;
-      margin-top: -3rem;
     }
 
     .brand {
@@ -36,14 +35,24 @@
     height: 100%;
     & > *:not(:last-child) {
       margin-right: 3rem;
+      @include respond(mob) {
+        margin-right: 0;
+      }
+    }
+
+    &.toggle {
+      display: none;
     }
 
     @include respond(mob) {
-      flex-wrap: wrap;
+      flex-direction: column;
       justify-content: center;
-      padding-bottom: 2rem;
-      padding-left: 1rem;
+      margin-left: 0;
+      order: 4;
+      flex: 0 0 100%;
+      padding-bottom: 3rem;
     }
+
     &:last-child {
       margin-right: 8rem;
 
@@ -54,6 +63,9 @@
 
     &--item {
       list-style: none;
+      @include respond(mob) {
+        padding: 1rem;
+      }
     }
     &--link {
       text-decoration: none;

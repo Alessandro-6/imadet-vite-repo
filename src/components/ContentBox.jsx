@@ -9,11 +9,18 @@ export default function ContentBox({ title, num, children, element }) {
         </h1>
         <p className="paragraph">{children}</p>
       </div>
-      <img
-        className={`about__img about__img--${num}`}
-        src={`images/image-${num}.jpg`}
-        alt={`img ${num}`}
-      />
+
+      <picture>
+        <source
+          media="(max-width:37.5em)"
+          srcSet={`images/image-${num}-mobile.jpg`}
+        />
+        <img
+          className={`about__img about__img--${num}`}
+          src={`images/image-${num}.jpg`}
+          alt={`img ${num}`}
+        />
+      </picture>
     </div>
   );
 }

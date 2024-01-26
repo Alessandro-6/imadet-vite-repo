@@ -1,6 +1,18 @@
-function LoginForm() {
+function SigninForm() {
   return (
     <form className="form">
+      <div className="form__input-group">
+        <label htmlFor="name" className="form__label">
+          Nome
+        </label>
+        <input
+          type="text"
+          placeholder="exemplo"
+          id="name"
+          className="form__input"
+          autoComplete="given-name"
+        />
+      </div>
       <div className="form__input-group">
         <label htmlFor="email" className="form__label">
           Email
@@ -10,7 +22,19 @@ function LoginForm() {
           placeholder="exemplo"
           id="email"
           className="form__input"
-          autoComplete="given-name"
+          autoComplete="email"
+        />
+      </div>
+      <div className="form__input-group">
+        <label htmlFor="phone-number" className="form__label">
+          Telefone
+        </label>
+        <input
+          type="sadasd"
+          placeholder="+244"
+          id="phone-number"
+          className="form__input"
+          autoComplete="tel"
         />
       </div>
       <div className="form__input-group">
@@ -32,4 +56,4 @@ function LoginForm() {
   );
 }
 
-export default LoginForm;
+export default SigninForm;

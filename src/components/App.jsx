@@ -5,6 +5,7 @@ import Faq from "../layout/Faq";
 import { ProductsProvider } from "../context/ProductsProvider";
 import BecomeASupplier from "../layout/BecomeASupplier";
 import LoginPage from "../layout/LoginPage";
+import SigninPage from "../layout/SigninPage";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
           <Route path="/faq" element={<Faq />} />
           <Route path="/become-a-supplier" element={<BecomeASupplier />} />
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/sign-in" element={<SigninPage />} />
         </Routes>
       </BrowserRouter>
     </ProductsProvider>
