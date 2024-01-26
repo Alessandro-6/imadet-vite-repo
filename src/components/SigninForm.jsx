@@ -50,7 +50,7 @@ function SigninForm() {
         />
       </div>
       <button type="submit" className="btn">
-        Login
+        Cadastrar
       </button>
     </form>
   );
