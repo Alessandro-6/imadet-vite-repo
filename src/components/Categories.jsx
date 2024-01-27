@@ -1,11 +1,12 @@
 /* eslint-disable react/prop-types */
 function Categories() {
   return (
-    <section className="section-categories">
+    <section className="section-categories" id="section-categories">
       <h2 className="heading-2 mb-lg">Alugar</h2>
       <div className="categories">
         <CategoriesCard title="Equipamentos" image="images/image-8.jpg" />
         <CategoriesCard title="Máquinas" image="images/image-9.jpg" />
+        <CategoriesCard title="Ferramentas" image="images/ferramentas.jpg" />
       </div>
     </section>
   );

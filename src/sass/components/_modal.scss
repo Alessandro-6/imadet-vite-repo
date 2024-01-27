@@ -27,6 +27,10 @@
     @include respond(mob) {
       max-width: 50%;
     }
+    @include respond(tab) {
+      height: 60vh;
+      max-width: 30vw;
+    }
 
     & > .close {
       position: absolute;

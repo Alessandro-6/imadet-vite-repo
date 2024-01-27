@@ -1,9 +1,17 @@
 .categories {
   display: flex;
-  justify-content: center;
-  gap: 4rem;
+  gap: 6rem;
+  width: 90%;
+  margin: 2rem auto;
 
   @include respond(mob) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16rem;
+  }
+
+  @include respond(tab) {
     flex-direction: column;
     align-items: center;
   }
@@ -23,6 +31,10 @@
       width: 100%;
       object-fit: cover;
       border-radius: 1rem;
+
+      @include respond(mob) {
+        height: 60rem;
+      }
     }
 
     &--description {

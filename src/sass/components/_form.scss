@@ -5,7 +5,7 @@
   gap: 4rem;
   justify-content: center;
   align-items: center;
-
+  margin: 0 auto;
   &__input-group {
     @include input-group;
   }

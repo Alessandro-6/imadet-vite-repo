@@ -1,14 +1,22 @@
 .cards {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, max-content);
   grid-auto-rows: min-content;
   justify-content: center;
+  align-items: center;
   gap: 3.2rem;
   row-gap: 6rem;
+  width: 70vw;
+  margin: 0 auto;
+
+  @include respond(tab) {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
 
   @include respond(mob) {
     grid-template-columns: 1fr;
-    align-items: center;
+    justify-items: center;
   }
 }
 
@@ -19,7 +27,6 @@
 
   @include respond(mob) {
     width: 70%;
-    margin: 0 auto;
   }
   .card-top {
     position: absolute;

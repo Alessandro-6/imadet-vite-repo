@@ -9,9 +9,9 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
-@media only screen and (max-width: 50em) {
+@media only screen and (max-width: 45em) {
   html {
-    font-size: 40%;
+    font-size: 42%;
   }
 }
 
@@ -84,7 +84,7 @@ body {
   color: #14213d;
   font-size: 1.6rem;
 }
-@media only screen and (max-width: 50em) {
+@media only screen and (max-width: 45em) {
   .copyright {
     margin-bottom: 6rem;
   }
@@ -264,16 +264,25 @@ body {
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, max-content);
   grid-auto-rows: min-content;
   justify-content: center;
+  align-items: center;
   gap: 3.2rem;
   row-gap: 6rem;
+  width: 70vw;
+  margin: 0 auto;
 }
-@media only screen and (max-width: 50em) {
+@media only screen and (min-width: 45.1em) and (max-width: 65em) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+}
+@media only screen and (max-width: 45em) {
   .cards {
     grid-template-columns: 1fr;
-    align-items: center;
+    justify-items: center;
   }
 }
 
@@ -282,10 +291,9 @@ body {
   width: 28.5rem;
   height: 44.5rem;
 }
-@media only screen and (max-width: 50em) {
+@media only screen and (max-width: 45em) {
   .card {
     width: 70%;
-    margin: 0 auto;
   }
 }
 .card .card-top {
@@ -298,7 +306,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-@media only screen and (max-width: 50em) {
+@media only screen and (max-width: 45em) {
   .card .card-top {
     background-color: rgba(20, 33, 61, 0.6);
     opacity: 1;
@@ -403,6 +411,11 @@ body {
   transform: translateY(0.3rem);
 }
 
+.btn-form {
+  width: 90vw;
+  margin: 0 auto;
+}
+
 .contacts {
   font-weight: 700;
   color: #14213d;
@@ -448,9 +461,15 @@ body {
   padding: 0 2rem;
   text-align: center;
 }
-@media only screen and (max-width: 50em) {
+@media only screen and (max-width: 45em) {
   .modal__window {
     max-width: 50%;
+  }
+}
+@media only screen and (min-width: 45.1em) and (max-width: 65em) {
+  .modal__window {
+    height: 60vh;
+    max-width: 30vw;
   }
 }
 .modal__window > .close {
@@ -479,7 +498,7 @@ div.header {
   height: 65vh;
   margin-bottom: 10rem;
 }
-@media only screen and (max-width: 50em) {
+@media only screen and (max-width: 45em) {
   div.header {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../../public/images/image-1-mobile.jpg);
   }
@@ -539,10 +558,19 @@ div.header {
 
 .categories {
   display: flex;
-  justify-content: center;
-  gap: 4rem;
+  gap: 6rem;
+  width: 90%;
+  margin: 2rem auto;
 }
-@media only screen and (max-width: 50em) {
+@media only screen and (max-width: 45em) {
+  .categories {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16rem;
+  }
+}
+@media only screen and (min-width: 45.1em) and (max-width: 65em) {
   .categories {
     flex-direction: column;
     align-items: center;
@@ -553,7 +581,7 @@ div.header {
   width: 45rem;
   text-align: center;
 }
-@media only screen and (max-width: 50em) {
+@media only screen and (max-width: 45em) {
   .categories__card {
     width: 70%;
     margin-bottom: 3rem;
@@ -564,6 +592,11 @@ div.header {
   width: 100%;
   object-fit: cover;
   border-radius: 1rem;
+}
+@media only screen and (max-width: 45em) {
+  .categories__card--img {
+    height: 60rem;
+  }
 }
 .categories__card--description {
   color: #14213d;
@@ -580,7 +613,7 @@ div.header {
 }
 .accordions .accordion {
   background-color: #eef0e5;
-  width: 70rem;
+  width: 90vw;
   padding: 1.6rem 3rem;
   border-radius: 1rem;
   box-shadow: 0 0.8rem 2rem rgba(20, 33, 61, 0.4);
@@ -685,11 +718,13 @@ div.header {
   gap: 4rem;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
 }
 .form__input-group {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 }
 .form__input {
   border-radius: 0.6rem;
@@ -705,6 +740,12 @@ div.header {
 .form__input:focus {
   outline: 1px solid #9f9f9f;
 }
+@media only screen and (max-width: 45em) {
+  .form__input {
+    width: 90vw;
+    margin: 0;
+  }
+}
 .form__label {
   font-weight: 700;
   color: #14213d;
@@ -712,9 +753,10 @@ div.header {
 }
 
 .step {
-  width: 60rem;
+  width: 90vw;
   font-size: 2.4rem;
   color: #14213d;
+  font-weight: 700;
 }
 
 .inline-btn {
@@ -734,14 +776,14 @@ div.header {
   height: 3.5rem;
   width: 3.5rem;
   top: 5rem;
-  left: 42rem;
+  right: 4rem;
   background: none;
   border: none;
   outline: 2px solid #fff;
   border-radius: 0.7rem;
   transition: all 0.2s;
 }
-@media only screen and (min-width: 37.5em) {
+@media only screen and (min-width: 45rem) {
   .hamburger {
     display: none;
   }
@@ -779,7 +821,7 @@ div.header {
   position: relative;
   z-index: 1;
 }
-@media only screen and (max-width: 50em) {
+@media only screen and (max-width: 45em) {
   .navbar {
     height: auto;
     width: 100vw;
@@ -790,7 +832,7 @@ div.header {
   width: 8rem;
   display: flex;
 }
-@media only screen and (max-width: 50em) {
+@media only screen and (max-width: 45em) {
   .navbar__logo {
     transform: translateX(-100%);
   }
@@ -811,7 +853,7 @@ div.header {
 .navbar__nav > *:not(:last-child) {
   margin-right: 3rem;
 }
-@media only screen and (max-width: 50em) {
+@media only screen and (max-width: 45em) {
   .navbar__nav > *:not(:last-child) {
     margin-right: 0;
   }
@@ -819,7 +861,7 @@ div.header {
 .navbar__nav.toggle {
   display: none;
 }
-@media only screen and (max-width: 50em) {
+@media only screen and (max-width: 45em) {
   .navbar__nav {
     flex-direction: column;
     justify-content: center;
@@ -832,7 +874,7 @@ div.header {
 .navbar__nav:last-child {
   margin-right: 8rem;
 }
-@media only screen and (max-width: 50em) {
+@media only screen and (max-width: 45em) {
   .navbar__nav:last-child {
     margin: 0;
   }
@@ -840,7 +882,7 @@ div.header {
 .navbar__nav--item {
   list-style: none;
 }
-@media only screen and (max-width: 50em) {
+@media only screen and (max-width: 45em) {
   .navbar__nav--item {
     padding: 1rem;
   }
@@ -885,7 +927,7 @@ div.header {
   align-items: center;
   justify-content: space-around;
 }
-@media only screen and (max-width: 50em) {
+@media only screen and (max-width: 45em) {
   .footer {
     padding: 8rem 2rem;
     flex-direction: column;
@@ -896,7 +938,7 @@ div.header {
   display: flex;
   margin-right: 20rem;
 }
-@media only screen and (max-width: 50em) {
+@media only screen and (max-width: 45em) {
   .footer__logo {
     align-self: center;
     transform: translateX(-50%);
@@ -936,10 +978,17 @@ div.header {
 .newsletter__input:focus {
   outline: 1px solid #9f9f9f;
 }
+@media only screen and (max-width: 45em) {
+  .newsletter__input {
+    width: 90vw;
+    margin: 0;
+  }
+}
 .newsletter__input-group {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 }
 .newsletter .error {
   border: 2px solid #f00;
@@ -960,7 +1009,7 @@ div.header {
 .about .paragraph {
   font-size: 2rem;
 }
-@media only screen and (max-width: 50em) {
+@media only screen and (max-width: 45em) {
   .about {
     flex-direction: column;
   }
@@ -969,7 +1018,7 @@ div.header {
   align-self: center;
   padding: 0 4rem;
 }
-@media only screen and (max-width: 50em) {
+@media only screen and (max-width: 45em) {
   .about__content {
     padding: 8rem 4rem;
   }
@@ -987,7 +1036,7 @@ div.header {
 .about__img--2 {
   order: -1;
 }
-@media only screen and (max-width: 50em) {
+@media only screen and (max-width: 45em) {
   .about__img {
     display: none;
   }
@@ -999,7 +1048,7 @@ div.header {
   flex-direction: column;
   background-color: #f3f3f3;
 }
-@media only screen and (max-width: 50em) {
+@media only screen and (max-width: 45em) {
   .section-about {
     padding: 10rem 0;
   }
@@ -1012,7 +1061,7 @@ div.header {
 .section-products {
   padding: 10rem;
 }
-@media only screen and (max-width: 50em) {
+@media only screen and (max-width: 45em) {
   .section-products {
     padding: 10rem 0;
   }
@@ -1020,11 +1069,13 @@ div.header {
 
 .section-newsletter {
   min-height: 100vh;
-  padding: 8rem 15rem 10rem;
+  width: max-content;
+  padding: 10rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: 4rem;
+  margin: 0 auto;
 }
 
 .section-categories {
@@ -1033,11 +1084,14 @@ div.header {
 }
 
 .faq {
-  padding: 15rem;
+  padding: 15rem 0;
   min-height: 100vh;
+  width: 90vw;
+  margin: 0 auto;
 }
 .faq > h2 {
   text-align: center;
+  font-size: 3.4rem;
 }
 
 .section-login {

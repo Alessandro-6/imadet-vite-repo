@@ -19,7 +19,7 @@ function SigninForm() {
         </label>
         <input
           type="text"
-          placeholder="exemplo"
+          placeholder="exemplo@gmail.com"
           id="email"
           className="form__input"
           autoComplete="email"
@@ -30,7 +30,7 @@ function SigninForm() {
           Telefone
         </label>
         <input
-          type="sadasd"
+          type="text"
           placeholder="+244"
           id="phone-number"
           className="form__input"
@@ -43,13 +43,13 @@ function SigninForm() {
         </label>
         <input
           type="password"
-          placeholder="exemplo@gmail.com"
+          placeholder=""
           id="password"
           className="form__input"
           autoComplete="current-password"
         />
       </div>
-      <button type="submit" className="btn">
+      <button type="submit" className="btn btn-form">
         Cadastrar
       </button>
     </form>

@@ -22,11 +22,13 @@
 
 .section-newsletter {
   min-height: 100vh;
-  padding: 8rem 15rem 10rem;
+  width: max-content;
+  padding: 10rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: 4rem;
+  margin: 0 auto;
 }
 
 .section-categories {
@@ -35,10 +37,13 @@
 }
 
 .faq {
-  padding: 15rem;
+  padding: 15rem 0;
   min-height: 100vh;
+  width: 90vw;
+  margin: 0 auto;
   & > h2 {
     text-align: center;
+    font-size: 3.4rem;
   }
 }
 

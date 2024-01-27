@@ -7,7 +7,7 @@ function LoginForm() {
         </label>
         <input
           type="text"
-          placeholder="exemplo"
+          placeholder="exemplo@gmail.com"
           id="email"
           className="form__input"
           autoComplete="given-name"
@@ -19,13 +19,13 @@ function LoginForm() {
         </label>
         <input
           type="password"
-          placeholder="exemplo@gmail.com"
+          placeholder=""
           id="password"
           className="form__input"
           autoComplete="current-password"
         />
       </div>
-      <button type="submit" className="btn">
+      <button type="submit" className="btn btn-form">
         Logar
       </button>
     </form>

@@ -13,7 +13,7 @@ const tools = [
   },
   {
     name: "Compactador de solo ",
-    content: "Lorem ipsum dolor sit.",
+    content: "Por dia:",
     image: "images/compactador-de-solo.jpg",
     price: "4.000kz",
     id: "image 2",
@@ -29,7 +29,7 @@ const tools = [
   },
   {
     name: "Britadeira",
-    content: "Por hora:",
+    content: "Por dia:",
     image: "images/britadeira.jpg",
     price: "120.000kz",
     id: "image 4",
