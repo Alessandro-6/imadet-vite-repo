@@ -9,10 +9,14 @@
 
   .accordion {
     background-color: $color-light-gray;
-    width: 90vw;
+    width: 80rem;
     padding: 1.6rem 3rem;
     border-radius: 1rem;
     box-shadow: 0 0.8rem 2rem rgba($color-secondary, 0.4);
+
+    @include respond(mob) {
+      width: 90vw;
+    }
 
     &__question {
       width: 100%;

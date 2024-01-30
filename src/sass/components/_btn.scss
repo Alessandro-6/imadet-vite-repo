@@ -46,6 +46,13 @@
 }
 
 .btn-form {
-  width: 90vw;
+  width: 100%;
   margin: 0 auto;
+  @include respond(mob) {
+    width: 90vw;
+  }
+}
+
+.btn-lg {
+  width: 30rem;
 }

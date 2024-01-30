@@ -56,7 +56,10 @@ function Nav({ showMenu }) {
   return (
     <ul className={`navbar__nav ${showMenu ? "toggle" : ""}`}>
       <li className="navbar__nav--item">
-        <a href="#section-categories" className="navbar__nav--link selected">
+        <a
+          href="/home#section-categories"
+          className="navbar__nav--link selected"
+        >
           Alugar
         </a>
       </li>

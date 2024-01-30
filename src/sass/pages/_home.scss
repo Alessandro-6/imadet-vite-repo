@@ -21,8 +21,9 @@
 }
 
 .section-newsletter {
-  min-height: 100vh;
-  width: max-content;
+  @include respond(mob) {
+    width: max-content;
+  }
   padding: 10rem 0;
   display: flex;
   flex-direction: column;
@@ -50,4 +51,16 @@
 .section-login {
   min-height: 100vh;
   padding: 7rem;
+}
+
+.section-category-products {
+  min-height: 100vh;
+  padding: 10rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & > h2 {
+    text-align: center;
+  }
 }

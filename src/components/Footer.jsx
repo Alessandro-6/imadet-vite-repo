@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { IconContext } from "react-icons";
-import { FaFacebook, FaInstagram, FaTwitter, FaWhatsapp } from "react-icons/fa";
+import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 import Modal from "./Modal";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,16 +14,19 @@ export default function Footer() {
           <h2 className="heading-2 mb-md">Contactos</h2>
           <div className="brands mb-sm">
             <IconContext.Provider value={{ className: "brand" }}>
-              <FaFacebook />
-              <FaInstagram />
-              <FaWhatsapp />
-              <FaTwitter />
+              <Link to="https://www.instagram.com/imadet?igsh=NG5iMHd5eTdmYzRh">
+                {" "}
+                <FaInstagram />
+              </Link>
+
+              <Link to="https://wa.me/message/6BM5CMFBI2WXL1">
+                {" "}
+                <FaWhatsapp />
+              </Link>
             </IconContext.Provider>
           </div>
 
-          <a href="true" className="email">
-            Imadet007@gmail.com
-          </a>
+          <span className="email">Imadet007@gmail.com</span>
         </Modal>
       )}
       <footer className="footer">

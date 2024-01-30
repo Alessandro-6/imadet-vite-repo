@@ -1,12 +1,21 @@
+import { useNavigate } from "react-router-dom";
+
 /* eslint-disable react/prop-types */
 function Categories() {
   return (
     <section className="section-categories" id="section-categories">
       <h2 className="heading-2 mb-lg">Alugar</h2>
       <div className="categories">
-        <CategoriesCard title="Equipamentos" image="images/image-8.jpg" />
-        <CategoriesCard title="Máquinas" image="images/image-9.jpg" />
-        <CategoriesCard title="Ferramentas" image="images/ferramentas.jpg" />
+        <CategoriesCard
+          title="Equipamentos"
+          image="images/image-8.jpg"
+          to="/equipments"
+        />
+        <CategoriesCard
+          title="Máquinas"
+          image="images/image-9.jpg"
+          to="/machines"
+        />
       </div>
     </section>
   );
@@ -14,9 +23,10 @@ function Categories() {
 
 export default Categories;
 
-function CategoriesCard({ title, image }) {
+function CategoriesCard({ title, image, to }) {
+  const navigate = useNavigate();
   return (
-    <div className="categories__card">
+    <div className="categories__card" onClick={() => navigate(to)}>
       <picture>
         <source
           className="categories__card--img"

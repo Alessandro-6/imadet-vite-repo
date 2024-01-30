@@ -6,6 +6,10 @@
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+  @include respond(mob) {
+    grid-template-columns: max-content;
+  }
+
   &__input-group {
     @include input-group;
   }

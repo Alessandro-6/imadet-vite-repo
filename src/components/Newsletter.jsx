@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Newsletter() {
   const navigate = useNavigate();
@@ -24,7 +24,13 @@ export default function Newsletter() {
         {" "}
         2-Preencha o formulário de parceria, indicando até dois equipamentos que
         pretende subscrever. Informe a marca, modelo, potência e qualidade de
-        cada equipamento. (BAIXAR FORMULÁRIO){" "}
+        cada equipamento.{" "}
+        <Link
+          to="https://www.mediafire.com/file/ajce3utpoah3tml/FORMULA%25CC%2581RIO_IMADET.pdf/file"
+          className="inline-btn"
+        >
+          (BAIXAR FORMULÁRIO)
+        </Link>{" "}
       </div>
       <div className="step">
         3-Envie o formulário preenchido juntamente com vídeos demonstrativos dos

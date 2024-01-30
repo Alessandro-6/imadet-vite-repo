@@ -6,6 +6,8 @@ import { ProductsProvider } from "../context/ProductsProvider";
 import BecomeASupplier from "../layout/BecomeASupplier";
 import LoginPage from "../layout/LoginPage";
 import SigninPage from "../layout/SigninPage";
+import Equipments from "./Equipments";
+import Machines from "./Machines";
 
 export default function App() {
   return (
@@ -19,6 +21,8 @@ export default function App() {
           <Route path="/become-a-supplier" element={<BecomeASupplier />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/sign-in" element={<SigninPage />} />
+          <Route path="/machines" element={<Machines />} />
+          <Route path="/equipments" element={<Equipments />} />
         </Routes>
       </BrowserRouter>
     </ProductsProvider>

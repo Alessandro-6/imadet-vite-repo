@@ -1,4 +1,10 @@
+.inline-btn :active,
+.inline-btn:visited,
+.inline-btn:link,
 .inline-btn {
+  text-decoration: none;
+  color: currentColor;
+
   display: inline-block;
   padding-bottom: 0.3rem;
   border-bottom: 0.2rem solid $color-secondary;
