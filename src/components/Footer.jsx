@@ -30,10 +30,10 @@ export default function Footer() {
         </Modal>
       )}
       <footer className="footer">
-        <a href="true" className="footer__logo">
+        <Link to="/home" className="footer__logo">
           <img src="images/logo.svg" alt="Logo" className="logo" />
           <img src="images/brand-dark.svg" alt="brand" className="brand" />
-        </a>
+        </Link>
         <span className="copyright">
           &copy; 2023-2030 Todos os direitos reservados
         </span>
