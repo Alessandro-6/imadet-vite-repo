@@ -49,7 +49,7 @@ const tools = [
     name: "Motobomba",
     content: "Por dia",
     image: "images/motobomba.jpg",
-    price: "5.499kz",
+    price: "2.000kz",
     id: "image 7",
   },
   {

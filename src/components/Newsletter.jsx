@@ -14,7 +14,7 @@ export default function Newsletter() {
       <div className="step">
         {" "}
         1-
-        <span className="inline-btn" onClick={() => navigate("/login")}>
+        <span className="inline-btn" onClick={() => navigate("/sign-in")}>
           {" "}
           Subscreva
         </span>{" "}

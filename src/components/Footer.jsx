@@ -14,7 +14,7 @@ export default function Footer() {
           <h2 className="heading-2 mb-md">Contactos</h2>
           <div className="brands mb-sm">
             <IconContext.Provider value={{ className: "brand" }}>
-              <Link to="https://www.instagram.com/imadet?igsh=NG5iMHd5eTdmYzRh">
+              <Link to="https://www.instagram.com/_imadet_/">
                 {" "}
                 <FaInstagram />
               </Link>
