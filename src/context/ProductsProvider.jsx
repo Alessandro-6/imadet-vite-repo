@@ -11,7 +11,7 @@ function ProductsProvider({ children }) {
   );
 
   const subtotal = cartList?.reduce(
-    (acc, curCart) => acc + parseInt(curCart.price),
+    (acc, curCart) => acc + parseInt(curCart.price.split(".").join("")),
     0
   );
   function handleAddCartItem(cartItem) {

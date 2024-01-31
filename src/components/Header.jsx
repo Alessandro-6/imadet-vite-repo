@@ -56,17 +56,14 @@ function Nav({ showMenu }) {
   return (
     <ul className={`navbar__nav ${showMenu ? "toggle" : ""}`}>
       <li className="navbar__nav--item">
-        <a
-          href="/home#section-categories"
-          className="navbar__nav--link selected"
-        >
-          Alugar
-        </a>
-      </li>
-      <li className="navbar__nav--item">
         <NavLink to="/home" className="navbar__nav--link">
           Home
         </NavLink>
+      </li>
+      <li className="navbar__nav--item">
+        <a href="#section-categories" className="navbar__nav--link selected">
+          Alugar
+        </a>
       </li>
       <li className="navbar__nav--item">
         <NavLink to="/company" className="navbar__nav--link">
@@ -84,13 +81,13 @@ function Nav({ showMenu }) {
         </NavLink>
       </li>
       <li className="navbar__nav--item">
-        <NavLink to="/login" className="navbar__nav--link">
-          Login
+        <NavLink to="/sign-in" className="navbar__nav--link">
+          Cadastre-se
         </NavLink>
       </li>
       <li className="navbar__nav--item">
-        <NavLink to="/sign-in" className="navbar__nav--link">
-          Cadastre-se
+        <NavLink to="/login" className="navbar__nav--link">
+          Login
         </NavLink>
       </li>
     </ul>

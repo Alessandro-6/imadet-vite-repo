@@ -24,6 +24,7 @@ body {
   font-size: 6rem;
   font-weight: 400;
   text-transform: uppercase;
+  display: flex;
 }
 
 .heading-2 {
@@ -58,6 +59,7 @@ body {
   &-sm {
     width: 30rem;
     margin: -8.5rem 0;
+    display: inline-block;
   }
 }
 
